@@ -17,6 +17,7 @@ app.use((req, res, next) => {
 });
 
 // To allow any unauthorised self-signed certificate
+
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 // Set template for node
