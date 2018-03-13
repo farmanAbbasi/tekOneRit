@@ -8,7 +8,7 @@ var session = require('express-session');
 var app = express();
 
 // Set request headers
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4300');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
@@ -56,17 +56,17 @@ mongoose.Promise = global.Promise;
 
 mongoose.connect(dbConfig.url);
 
-mongoose.connection.on('error', function () {
+mongoose.connection.on('error', () => {
     console.log('Could not connect to the database. Exiting now...');
     process.exit();
 });
 
-mongoose.connection.once('open', function () {
+mongoose.connection.once('open', () => {
     console.log("Successfully connected to the database");
 })
 
 // define a simple route
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
     res.json({ msg: "Welcome to TEKOne api." });
 });
 
@@ -74,6 +74,6 @@ app.get('/', function (req, res) {
 require('./routes')(app);
 
 // listen for requests
-app.listen(3000, function () {
+app.listen(3000, () => {
     console.log("Server is listening on port 3000");
 });
