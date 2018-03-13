@@ -17,6 +17,8 @@ import { FooterComponent } from './components/app/footer/footer.component';
 import { SidebarComponent } from './components/app/sidebar/sidebar.component';
 import { GlobalService } from './services/global.service';
 
+// Modules
+import { GridStackModule } from 'ng2-gridstack';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { GlobalService } from './services/global.service';
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { useHash: true }),
-    HttpClientModule
+    HttpClientModule,
+    GridStackModule
   ],
   providers: [GlobalService],
   bootstrap: [AppComponent]
