@@ -16,9 +16,9 @@ passport.use(new PasswordGrantStrategy({
     }
 }, function (accessToken, refreshToken, requestParams, profile, done) {
     setTokenObject(accessToken, refreshToken, requestParams.id_token);
-    done(null, profile, );
+    done(null, profile);
 }));
-passport.serializeUser(function (user, cb) {
+passport.serializeUser((user, cb) => {
     cb(null, user);
 });
 passport.deserializeUser(function (obj, cb) {
