@@ -1,13 +1,14 @@
 <nav class="navbar navbar-expand navbar-light fixed-top bg-light" id="top-navbar">
-  <a class="navigation" href="#">
+  <a (click)="toggleSideBar()" class="navigation">
     <i class="fas fa-bars"></i>
   </a>
   <a class="navbar-brand" href="#">
+    <!--
     <div class="logo-text">tek-<span>one</span>
     </div>
-    <!--<div>
-      <img id="logo-img" src="./assets/images/company/logo.png">
-    </div>-->
+  -->
+      <img id="logo-img" src="./assets/images/company/logo.png" style=" max-width: 160px;
+      padding-left: 0.5em;">
   </a>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
@@ -32,6 +33,9 @@
             <i class="far fa-user" style="color: #0885AC"></i> View Profile</a>
           <a class="dropdown-item" href="#">
             <i class="far fa-question-circle" style="color: #0885AC"></i> Help</a>
+          <a class="dropdown-item" href="#">
+            <!-- check the margin-left value given -->
+            <i class="fas fa-exclamation" style="margin-left:4px; color: #0885AC"></i> &nbsp;Console</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">
             <i class="fas fa-sign-out-alt" style="color: #0885AC"></i> Logout</a>

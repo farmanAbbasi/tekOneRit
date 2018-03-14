@@ -15,11 +15,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/app/header/header.component';
 import { FooterComponent } from './components/app/footer/footer.component';
 import { SidebarComponent } from './components/app/sidebar/sidebar.component';
+import { SidebarService } from './services/sidebar.service';
+
 import { GlobalService } from './services/global.service';
 
 // Modules
 import { GridStackModule } from 'ng2-gridstack';
-
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { GridStackModule } from 'ng2-gridstack';
     HttpClientModule,
     GridStackModule
   ],
-  providers: [GlobalService],
+  providers: [GlobalService, SidebarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,19 +1,22 @@
-#sidebar {
+:host {
     width: 250px;
     position: fixed;
     top: 50px;
     left: 0;
+    display: block;
     height: 100vh;
     z-index: 999;
     background: #f8f9fa;
     color: #a4abb3;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     box-shadow: 0px 3px 12px rgba(0,0,0,0.16);
 }
 
-#sidebar.active {
-    margin-left: -250px;
+:host.active {
+
+     margin-left: -250px;
 }
+
 
 
 #sidebar ul.components {
@@ -91,9 +94,6 @@ ul.CTAs a {
     border-bottom: 1px solid #ebeef2;
 }
 @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
     #sidebar.active {
         margin-left: 0;
     }
@@ -102,8 +102,5 @@ ul.CTAs a {
     }
     #content.active {
         width: calc(100% - 250px);
-    }
-    #sidebarCollapse span {
-        display: none;
     }
 }
