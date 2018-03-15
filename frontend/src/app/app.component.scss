@@ -1,3 +1,6 @@
+.wrap{
+    margin-left: 0px !important;
+}
 .main {
     min-height: 662px;
     z-index: 12;
@@ -20,7 +23,10 @@
 
 .dashboard {
     overflow: hidden;
-    padding: 10px 15px;
+}
+
+.content {
+    padding: 10px 15px !important;
 }
 
 .container-fluid {

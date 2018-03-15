@@ -16,11 +16,15 @@ import { HeaderComponent } from './components/app/header/header.component';
 import { FooterComponent } from './components/app/footer/footer.component';
 import { SidebarComponent } from './components/app/sidebar/sidebar.component';
 import { SidebarService } from './services/sidebar.service';
-
+import { LoginComponent } from './components/login/login.component';
 import { GlobalService } from './services/global.service';
 
 // Modules
 import { GridStackModule } from 'ng2-gridstack';
+import { FormsModule } from '@angular/forms';
+import { AuthenticationService } from './services/authentication.service';
+// Guards
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -28,15 +32,17 @@ import { GridStackModule } from 'ng2-gridstack';
     DashboardComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { useHash: true }),
     HttpClientModule,
-    GridStackModule
+    GridStackModule,
+    FormsModule
   ],
-  providers: [GlobalService, SidebarService],
+  providers: [GlobalService, AuthenticationService, AuthGuard, SidebarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

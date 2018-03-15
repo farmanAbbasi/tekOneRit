@@ -1,4 +1,4 @@
-<nav id="sidebar">
+<nav *ngIf="isLoggedIn$ | async" id="sidebar">
   <ul class="list-unstyled components">
     <li class="menu-item">
       <a href="#">
