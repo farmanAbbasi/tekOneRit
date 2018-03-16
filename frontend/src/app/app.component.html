@@ -1,7 +1,7 @@
 <app-header></app-header>
 <app-sidebar></app-sidebar>
-<div class="wrapper dashboard">
-    <div class="main backdrop">
+<div class="wrapper">
+    <div [ngClass]="{'main':true, 'backdrop':true,'wrap' : (isLoggedIn$ | async)===false}">
         <div id="content">
             <div class="container-fluid">
                 <router-outlet></router-outlet>
