@@ -21,16 +21,26 @@ export class AuthenticationService {
     constructor(private http: HttpClient, private router: Router) { }
 
     login(username: string, password: string) {
-        return this.http.post<any>('http://' + window.location.hostname + ':3000/api/login', { username: username, password: password })
-            .map(response => {
-                if (response && response.id_token) {
-                    this.loggedIn.next(true);
-                    // store user details and jwt token in local storage to keep user logged in between page refreshes
-                    localStorage.setItem('currentUser', JSON.stringify(response));
-                    this.getLoggedInName.emit(response.first_name + ' ' + response.last_name);
-                }
-                return response;
+        if (username == "demo" && password == "demo") {
+            return new Observable((observer) => {
+                this.loggedIn.next(true);
+                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                localStorage.setItem('currentUser', "Demo User");
+                observer.next("Demo User");
+                observer.complete();
             });
+        } else {
+            return this.http.post<any>('http://' + window.location.hostname + ':3000/api/login', { username: username, password: password })
+                .map(response => {
+                    if (response && response.id_token) {
+                        this.loggedIn.next(true);
+                        // store user details and jwt token in local storage to keep user logged in between page refreshes
+                        localStorage.setItem('currentUser', JSON.stringify(response));
+                        this.getLoggedInName.emit(response.first_name + ' ' + response.last_name);
+                    }
+                    return response;
+                });
+        }
     }
 
     logout() {
