@@ -1,0 +1,146 @@
+.example-card {
+    padding: 5px !important;
+    background-color: rgb(252, 252, 252);
+}
+
+.row {
+    margin-left: 5px !important;
+    margin-right: 0px !important;
+    border-bottom: 1px solid #c5c5c5;
+    width: 104%;
+}
+
+.trend_title {
+    font-family: "Montserrat", sans-serif;
+    color: #000000 !important;
+    font-size: 14px !important;
+    font-weight: 600;
+    padding-top: 10%;
+}
+
+.dis p {
+    word-break: break-all;
+}
+
+.badge1 {
+    font-weight: bold;
+}
+
+.cardHeading {
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 15px;
+    color: #0c0c0c;
+    background-color: #EBEFF5;
+    font-family: Georgia;
+}
+
+.trend_description {
+    margin-bottom: -9px !important;
+}
+
+.example-card {
+    max-width: 400px;
+    width: 100%;
+    margin-top: 2px !important;
+    color: #8B8A8A;
+}
+
+.flex_container {
+    display: flex;
+    justify-content: space-around !important;
+    padding-bottom: 3px;
+    flex-direction: row !important;
+}
+
+.trend_like {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.example-header-image {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjC1ue_JBgcpqkfusdsWaehhnHrjx5nZMG76rEZj4hoAm_gMD');
+    background-size: cover;
+}
+
+.header {
+    padding-left: 12px;
+}
+
+.thumb {
+    color: #2196F3 !important;
+}
+
+.views {
+    color: #4CAF50 !important;
+}
+
+.cpeople {
+    padding-left: 0;
+    /*changes*/
+    position: absolute;
+    width: 313px;
+    height: 89%;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    font-size: 11px;
+    font-style: italic;
+    width: 100%;
+    margin: 0.25em 0;
+    padding: 0.35em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #6b6969 !important;
+}
+
+blockquote:before {
+    display: block;
+    padding-left: 47px;
+    content: "\201C";
+    font-size: 30px;
+    position: absolute;
+    left: -27px;
+    top: -8px;
+    color: #7a7a7a;
+}
+
+#scScroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+#cScroll::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+}
+
+#cScroll::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #bbbbbb4d;
+}
+
+.scrollbar {
+    margin-left: -4px;
+    float: left;
+    background: #fff;
+    margin-bottom: 25px;
+}
+
+.scrollbar {
+    overflow-x: hidden !important;
+}
+
+.scrollbar:hover {
+    overflow-y: scroll !important;
+}
