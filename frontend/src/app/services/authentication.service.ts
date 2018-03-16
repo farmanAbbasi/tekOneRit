@@ -21,12 +21,13 @@ export class AuthenticationService {
     constructor(private http: HttpClient, private router: Router) { }
 
     login(username: string, password: string) {
-        if (username == "demo" && password == "demo") {
+
+        if (username === 'demo' && password === 'demo') {
             return new Observable((observer) => {
                 this.loggedIn.next(true);
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('currentUser', "Demo User");
-                observer.next("Demo User");
+                localStorage.setItem('currentUser', 'Demo User');
+                this.getLoggedInName.emit('Demo User');
+                observer.next('Demo User');
                 observer.complete();
             });
         } else {
