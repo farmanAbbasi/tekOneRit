@@ -28,7 +28,6 @@ import { TrendingComponent } from './components/trending/trending.component';
 import { TrendingService } from './services/trending.service';
 import { MostConnectedService } from './services/most-connected.service';
 
-
 import { FormsModule } from '@angular/forms';
 import { AuthenticationService } from './services/authentication.service';
 // Guards
