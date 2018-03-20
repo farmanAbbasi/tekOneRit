@@ -9,9 +9,37 @@ body {
 
 .grid-stack-item-content {
     //border: 1px solid #bbbbbb !important;
-    border-radius: 3px !important;
-    background: #EBEFF5 !important;
-    padding: 10px;
-    padding-right: 10px !important;
+    border-radius: 5px !important;
+    background: #fff !important;
+    padding: 0px;
     overflow-y: hidden !important;
+}
+
+.grid-stack-item {
+    //border: 1px solid #bbbbbb !important;
+    width: 100%!important;
+}
+
+#cScroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+#cScroll::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+}
+
+#cScroll::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #bbbbbb4d;
+}
+
+.scrollbar {
+    overflow-x: hidden !important;
+}
+
+.scrollbar:hover {
+    overflow-y: scroll !important;
 }

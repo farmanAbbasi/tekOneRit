@@ -1,123 +1,93 @@
-.example-card {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
+.friend {
+    height: auto;
+    border-bottom: 1px solid #e7ebee;
+    position: relative;
+    list-style: none;
 }
 
-#profileTab {
-    display: inline-flex;
-    line-height: auto;
+.friend:hover {
+    background: #f1f4f6;
+    cursor: pointer;
 }
 
-#profileTab span {
-    font-size: 14px;
-    color: #5c5a5a;
-    padding: 0px 0px 0px 5px;
+.friend img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 15px;
+    float: left;
 }
 
-#profileTab span:hover {
-    color: #5c5a5a;
+.floatingImg {
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 12px;
+    border: 3px solid #fff;
 }
 
-#profileTab img {
-    height: 35px;
+.friend p {
+    float: left;
+    width: auto;
+    display: grid;
+    margin-bottom: 0;
+    position: absolute;
+    left: 65px;
+    top: 13px;
 }
 
-.row {
-    padding-top: 6px;
-    margin-left: 5px !important;
-    margin-right: 0px !important;
-    border-bottom: 1px solid #c5c5c5;
-    padding: -10px !important;
-    width: 97%;
+.friend p strong {
+    font-weight: 600;
+    font-size: 15px;
+    color: #597a96;
+}
+
+.friend p span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #aab8c2;
+}
+
+.friend .status {
+    background: #26c281;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 31px;
+    right: 17px;
+}
+
+.friend .status.away {
+    background: #ffce54;
+}
+
+.friend .status.inactive {
+    background: #eaeef0;
+}
+
+.contact_icon {
+    color: #7e7a96;
 }
 
 .cardHeading {
-    font-weight: bold;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: left;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    margin-bottom: 0;
+    text-align: center;
     font-size: 15px;
-    width: 100%;
-    padding-left: 12px;
-    color: #000000 !important;
-    background-color: #EBEFF5;
-    font-family: Georgia;
+    font-weight: lighter;
+    color: #a4abb3 !important;
+    background-color: #f8f9fa !important;
+    border-bottom: 1px solid #e7ebee;
+    /* font-family: "Exo"; */
 }
 
-.img-circle {
-    border-radius: 70px;
-    border: 2px solid #8B8A8A;
+.row {
+    margin: -0.5px;
 }
 
-.name {
-    font-family: "Montserrat", sans-serif;
-    color: #000000 !important;
-    font-size: 14px !important;
-    font-weight: 600;
-}
-
-.description {
-    font-family: "Montserrat", sans-serif;
-    font-size: 11px important;
-    color: #999 important;
-    font-size: 0.9rem important;
-    margin: 0.5rem 0 0.8rem important;
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-    background: #2196F3;
-    padding: 0.1rem 0.7rem;
-    display: inline-block;
-    font-size: 11px !important;
-}
-
-.link {
-    padding-left: 6px;
-}
-
-.people {
-    padding-left: 0;
-    /*changes*/
-    position: absolute;
-    width: 97%;
-    height: 89%;
-}
-
-ol {
-    overflow-y: scroll !important;
-}
-
-#scScroll::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #fff;
-}
-
-#cScroll::-webkit-scrollbar {
-    width: 5px;
-    background-color: #fff;
-}
-
-#cScroll::-webkit-scrollbar-thumb {
-    border-radius: 2px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #bbbbbb4d;
-}
-
-.scrollbar {
-    margin-left: -4px;
-    float: left;
-    background: #fff;
-    margin-bottom: 25px;
-}
-
-.scrollbar {
-    overflow-x: hidden !important;
-}
-
-.scrollbar:hover {
-    overflow-y: scroll !important;
+.friends {
+    padding-left: 0px !important;
 }
