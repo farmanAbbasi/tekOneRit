@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var atob = require('atob');
 var passport = require('passport');
-var PasswordGrantStrategy = require('passport-oauth2-password-grant');
+var PasswordGrantStrategy = require('./login.strategy');
 var scopeParam = 'openid address clientinfo user_name email mobile_phone phone profile'
 var acessTokenObject;
 
@@ -64,8 +64,8 @@ exports.success = function (req, res) {
 };
 
 exports.login = function (req, res, next) {
-    var username = req.query.username;
-    var password = req.query.password;
+    var username = req.body.username;
+    var password = req.body.password;
     passport.authenticate('password-grant', {
         username: username,
         password: password,

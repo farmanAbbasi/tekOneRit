@@ -12,7 +12,7 @@ router.get('/', posts.findAll);
 // Retrieve all posts of particular post type
 router.get('/:postType', login.isUserAuthenticated, posts.findOne);
 
-// Update a posst
+// Update a post
 router.put('/:postType', login.isUserAuthenticated, posts.update);
 
 // Delete a post

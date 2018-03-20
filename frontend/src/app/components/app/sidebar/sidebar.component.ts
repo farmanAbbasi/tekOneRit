@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { SidebarService } from '../../../services/sidebar.service';
+import { AuthenticationService } from '../../../services/authentication.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  // class binding to the host element - <app-sidebar>
+  @HostBinding('class.active')
+  active = false;
+
+  constructor(private authService: AuthenticationService, public sideBarService: SidebarService) { }
+  isLoggedIn$: Observable<boolean>;
 
   ngOnInit() {
+    this.sideBarService.change.subscribe(active => {
+      this.active = active;
+    });
+    this.isLoggedIn$ = this.authService.isLoggedIn;
   }
-
 }

@@ -1,15 +1,15 @@
-<nav id="sidebar">
+<nav *ngIf="isLoggedIn$ | async" id="sidebar">
   <ul class="list-unstyled components">
     <li class="menu-item">
       <a href="#">
         <i class="fab fa-slack-hash fa-lg"></i>
-        <span class="d-none d-md-inline"> Dashboard</span>
+        <span class="d-md-inline"> Dashboard</span>
       </a>
     </li>
     <li class="menu-item">
       <a routerLink="/forum" data-toggle="collapse" aria-expanded="false">
         <i class="fab fa-wpforms fa-lg"></i>
-        <span class="d-none d-md-inline"> Forum</span>
+        <span class="d-md-inline"> Forum</span>
       </a>
     </li>
   </ul>

@@ -3,7 +3,7 @@ const router = module.exports = express.Router();
 var access = require('./login.controller.js');
 
     // Retrieve user info from sso
-    router.get('/', access.login);
+    router.post('/', access.login);
 
     // User success call back
     router.get('/success', access.success);

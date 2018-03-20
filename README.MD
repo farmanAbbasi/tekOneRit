@@ -1,3 +1,4 @@
+
 git init
 
 git config --global http.sslVerify false
@@ -11,10 +12,3 @@ git add .
 git commit -m "test"
 
 git push origin master
-
-git checkout -b dev
-
--b = branch
--m = commit message
-. = all
-

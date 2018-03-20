@@ -16,6 +16,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/app/header/header.component';
 import { FooterComponent } from './components/app/footer/footer.component';
 import { SidebarComponent } from './components/app/sidebar/sidebar.component';
+import { MostConnectedComponent } from './components/most-connected/most-connected.component';
+import { SidebarService } from './services/sidebar.service';
+import { LoginComponent } from './components/login/login.component';
 import { GlobalService } from './services/global.service';
 
 // Modules
@@ -23,6 +26,10 @@ import { GridStackModule } from 'ng2-gridstack';
 import { ForumComponent } from './components/forum/forum.component';
 import { ForumPostService } from './services/forum/forum-post.service';
 
+import { FormsModule } from '@angular/forms';
+import { AuthenticationService } from './services/authentication.service';
+// Guards
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
