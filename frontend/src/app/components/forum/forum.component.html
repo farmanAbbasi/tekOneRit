@@ -40,7 +40,7 @@
         </div>
         <div class="postdata col c2">
           <h5>{{card.pollquestion}}</h5>
-          <div class="polloptions" *ngFor="let option of card.choices;let i = index" ngModel="data">
+          <div class="polloptions" *ngFor="let option of card.choices;let i = index">
             <input type="radio" (change)="onSelectButton(name)" name="options" class="choices" *ngIf="card.ismultiplechoice ==false"
             />
             <input type="checkbox" *ngIf="card.ismultiplechoice ==true" />{{option}}

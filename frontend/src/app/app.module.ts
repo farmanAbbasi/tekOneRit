@@ -1,9 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
-
 import { HttpClientModule } from '@angular/common/http';
 
 // Main route
@@ -25,11 +22,13 @@ import { GlobalService } from './services/global.service';
 import { GridStackModule } from 'ng2-gridstack';
 import { ForumComponent } from './components/forum/forum.component';
 import { ForumPostService } from './services/forum/forum-post.service';
-
+import {MatListModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { AuthenticationService } from './services/authentication.service';
 // Guards
 import { AuthGuard } from './guards/auth.guard';
+import { TrendingService } from './services/trending.service';
+import { MostConnectedService } from './services/most-connected.service';
 
 @NgModule({
   declarations: [
@@ -38,18 +37,20 @@ import { AuthGuard } from './guards/auth.guard';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    ForumComponent
+    ForumComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { useHash: true }),
     HttpClientModule,
     GridStackModule,
+    MatListModule,
     MatCardModule,
-    MatCheckboxModule,
-    MatGridListModule
+    FormsModule
   ],
-  providers: [GlobalService, ForumPostService],
+ 
+  providers: [GlobalService, AuthenticationService, AuthGuard, SidebarService, MostConnectedService,ForumPostService,TrendingService],
   bootstrap: [AppComponent]
-})
-export class AppModule { }
+ })
+ export class AppModule { }
