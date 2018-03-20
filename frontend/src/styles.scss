@@ -2,12 +2,14 @@
 
 @import "~gridstack/dist/gridstack.min.css";
 @import url('https://fonts.googleapis.com/css?family=Exo');
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~bootstrap/dist/css/bootstrap.css";
 body {
-    background: #ebeff5;
+    background: #EEEEEE;
 }
 
 #scScroll::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #fff;
 }
 
@@ -18,7 +20,7 @@ body {
 
 #cScroll::-webkit-scrollbar-thumb {
     border-radius: 2px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    -webkit-moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
     background-color: #bbbbbb4d;
 }
 

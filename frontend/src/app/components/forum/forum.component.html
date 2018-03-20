@@ -1,0 +1,76 @@
+<div class="Container">
+  <ul>
+    <li *ngFor="let card of contentarray[0]">
+      <!-- if data fetched is post type -->
+      <div class="post" *ngIf="card.posttype =='Post'">
+        <div class="profilepic col c1">
+          <img src="../../../assets/images/icons/header/profile.png">
+        </div>
+        <div class="postdata col c2">
+          <p>{{card.posttext}}</p>
+          <div class="metad">
+            <span class="user">Posted by
+              <a href="#">{{card.userid}}</a>
+            </span>
+            <span class="date">
+              <time datetime="2018-March-19">{{card.postdate | date: 'MMM d y'}}</time>
+            </span>
+          </div>
+        </div>
+        <div class="statbox col c3">
+          <div class="viewscount">
+            <button class="like" (click)="liked()">
+              <i class='far fa-heart' *ngIf='!likeicon'></i>
+              <i class='fas fa-heart' *ngIf='likeicon'></i>
+            </button>
+            <span class="text-5">{{card.likecount}}</span>
+          </div>
+          <div class="commmentcount">
+            <button class="comment">
+              <i class="fas fa-comments"></i>
+            </button>
+            <span class="text-5">{{card.commentcount}}</span>
+          </div>
+        </div>
+      </div>
+      <!-- if data fetched is poll type -->
+      <div class="post" *ngIf="card.posttype == 'poll'">
+        <div class="profilepic col c1">
+          <img src="../../../assets/images/icons/header/profile.png">
+        </div>
+        <div class="postdata col c2">
+          <h5>{{card.pollquestion}}</h5>
+          <div class="polloptions" *ngFor="let option of card.choices;let i = index" ngModel="data">
+            <input type="radio" (change)="onSelectButton(name)" name="options" class="choices" *ngIf="card.ismultiplechoice ==false"
+            />
+            <input type="checkbox" *ngIf="card.ismultiplechoice ==true" />{{option}}
+          </div>
+          <button (click)="vote(name)">Submit</button>
+          <div class="metad">
+            <span class="user">Posted by
+              <a href="#">userid</a>
+            </span>
+            <span class="date">
+              <time datetime="2018-03-19">19 march</time>
+            </span>
+          </div>
+        </div>
+        <div class="statbox col c3">
+          <div class="viewscount">
+            <button class="like" (click)="liked()">
+              <i class='far fa-heart' *ngIf='!likeicon'></i>
+              <i class='fas fa-heart' *ngIf='likeicon'></i>
+            </button>
+            <span class="text-5">4200</span>
+          </div>
+          <div class="commmentcount">
+            <button class="comment">
+              <i class="fas fa-comments"></i>
+            </button>
+            <span class="text-5">4200</span>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

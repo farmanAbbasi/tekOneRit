@@ -25,7 +25,7 @@ app.set('view engine', 'ejs');
 
 // Cross-Origin 
 app.use(cors({
-    origin: 'http://localhost:4300'
+    origin: 'http://localhost:4200'
 }));
 
 
@@ -56,6 +56,7 @@ var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 mongoose.connect(dbConfig.url);
+console.log(dbConfig.url);
 
 mongoose.connection.on('error', () => {
     console.log('Could not connect to the database. Exiting now...');

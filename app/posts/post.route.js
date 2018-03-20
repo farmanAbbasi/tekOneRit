@@ -7,7 +7,7 @@ var posts = require('./post.controller.js');
 //roter.post('/posts', posts.create);
 
 // Retrieve all posts
-router.get('/', login.isUserAuthenticated, posts.findAll);
+router.get('/', posts.findAll);
 
 // Retrieve all posts of particular post type
 router.get('/:postType', login.isUserAuthenticated, posts.findOne);
